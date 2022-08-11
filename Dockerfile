@@ -24,6 +24,7 @@ RUN apk --no-cache add \
  && strip /usr/bin/s3fs
 
 FROM golang:1.17-alpine as builder
+RUN go env -w GOPROXY=https://goproxy.cn
 RUN apk add git make binutils
 COPY / /work
 WORKDIR /work
