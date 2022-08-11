@@ -30,6 +30,7 @@ WORKDIR /work
 RUN make
 
 FROM alpine:3.15
+RUN echo -e http://mirrors.ustc.edu.cn/alpine/v3.15/main/ > /etc/apk/repositories
 RUN apk --no-cache add \
     ca-certificates \
     fuse \
