@@ -14,6 +14,7 @@ RUN apk --no-cache add \
         libxml2-dev \
         fuse-dev \
         curl-dev \
+ && git config --global http.version HTTP/1.1 \
  && git clone https://github.com/s3fs-fuse/s3fs-fuse.git \
  && cd s3fs-fuse \
  && git checkout tags/${S3FS_VERSION} \
