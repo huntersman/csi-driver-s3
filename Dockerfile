@@ -1,5 +1,5 @@
 FROM alpine:3.15 AS s3fs-builder
-RUN echo -e http://mirrors.ustc.edu.cn/alpine/v3.15/main/ >> /etc/apk/repositories
+RUN echo -e http://mirrors.ustc.edu.cn/alpine/v3.15/main/ > /etc/apk/repositories
 
 ARG S3FS_VERSION=v1.90
 
